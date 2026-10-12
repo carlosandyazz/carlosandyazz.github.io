@@ -28,8 +28,10 @@
 
 
 <body>
-   
-  
+
+
+
+<div id="stars"></div>
 
 
 
@@ -63,18 +65,18 @@
     <header class="header">
 
 
-        <h1>
-            Para Carlos:
-        </h1>
+    <h1>
+        Para Carlos:
+    </h1>
 
 
-
-       
-
+</header>
 
 
-    </header>
-    <!-- =========================
+<!-- PEGA AQUÍ EL REPRODUCTOR DE CANCION -->
+
+
+<!-- =========================
      REPRODUCTOR DE CANCION
 ========================= -->
 
@@ -109,35 +111,10 @@
 
     cursor:pointer;
 
-    transition:.3s;
-
-    box-shadow:
-
-    0 0 20px rgba(255,126,179,.4);
-
-}
-
-
-.music-button:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-
-    0 0 30px rgba(255,126,179,.8);
-
-}
-
-
-.music-button:active{
-
-    transform:scale(.95);
-
 }
 
 
 </style>
-
 
 
 <div class="music-container">
@@ -145,22 +122,14 @@
 
     <audio id="cancion">
 
-
         <source src="arrullodeestrellas.mp3" type="audio/mpeg">
-
-
-        Tu navegador no soporta audio.
-
 
     </audio>
 
 
-
     <button class="music-button" onclick="reproducir()">
 
-
-        🎵 Reproducir
-
+        🎵 Reproducir nuestra canción
 
     </button>
 
@@ -168,17 +137,11 @@
 </div>
 
 
-
-
-
 <script>
-
 
 const audio = document.getElementById("cancion");
 
-
 const botonMusica = document.querySelector(".music-button");
-
 
 
 function reproducir(){
@@ -189,21 +152,15 @@ function reproducir(){
 
         audio.volume = 0.35;
 
-
         audio.play();
 
-
-
         botonMusica.innerHTML = "⏸️ Pausar canción";
-
 
 
     }else{
 
 
         audio.pause();
-
-
 
         botonMusica.innerHTML = "🎵 Reproducir nuestra canción";
 
@@ -213,8 +170,11 @@ function reproducir(){
 
 }
 
-
 </script>
+
+
+
+
 
 
 
@@ -228,6 +188,12 @@ function reproducir(){
 
 
 
+
+        <p class="name">
+
+            Carlos:
+
+        </p>
 
 
 
@@ -433,22 +399,118 @@ function reproducir(){
 
 
         </div>
-        <div class="postscript">
+
+
+<!-- =========================
+        POSDATA
+========================= -->
+
+
+<style>
+
+.postscript{
+
+    margin-top:50px;
+
+    text-align:center;
+
+}
+
+
+.postscript h3{
+
+    font-size:1.8rem;
+
+    color:#ffd5fa;
+
+    margin-bottom:15px;
+
+}
+
+
+.postscript p{
+
+    text-align:center;
+
+    font-size:1.35rem;
+
+    line-height:1.6;
+
+    margin:15px 0;
+
+}
+
+
+
+.surprise-button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff7eb3,#6a5acd);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:1.4rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.surprise-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.surprise-button:active{
+
+    transform:scale(.95);
+
+}
+
+</style>
+
+
+
+<div class="postscript">
+
 
     <h3>P.D.</h3>
 
+
+
     <p>
-        Preparé una sorpresa más, porque hay recuerdos que las palabras no alcanzan a
-        expresar.
+
+        Preparé una sorpresa más, porque hay recuerdos que las palabras no alcanzan a expresar.
+
     </p>
 
-    <a href="videos.html" class="video-button">
-        Haz clic aquí para descubrirla
+
+
+    <a href="videos.html" class="surprise-button">
+
+        Abrir...
+
     </a>
 
+
 </div>
-
-
 
 
 

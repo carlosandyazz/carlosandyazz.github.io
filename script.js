@@ -1,4 +1,8 @@
+// ======================================
+// ESTRELLAS DEL FONDO
+// ======================================
 
+const stars = document.getElementById("stars");
 
 
 for(let i = 0; i < 180; i++){

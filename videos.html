@@ -1,107 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arrullo de Estrellas ✨</title>
+
+
+<title>Nuestros recuerdos ❤️</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
 
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: radial-gradient(circle, #302b63, #0f0c29);
-        font-family: Arial, sans-serif;
-        overflow: hidden;
-        color: white;
-    }
 
-    .music-card {
-        text-align: center;
-        background: rgba(255,255,255,0.1);
-        padding: 40px;
-        border-radius: 25px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 30px rgba(255,255,255,0.2);
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    h1 {
-        font-size: 32px;
-        margin-bottom: 25px;
-    }
 
-    .music-button {
-        background: linear-gradient(45deg, #ff7eb3, #6a5acd);
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 30px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+body{
 
-    .music-button:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 20px #ff7eb3;
-    }
+    min-height:100vh;
 
-    .stars {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: radial-gradient(white 1px, transparent 1px);
-        background-size: 40px 40px;
-        opacity: 0.3;
-        animation: moveStars 20s linear infinite;
-    }
+    background:
+    radial-gradient(circle at top,#24356b,#090d1d 50%,#02030a);
 
-    @keyframes moveStars {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(40px);
-        }
-    }
+    color:white;
+
+    font-family:'Dancing Script',cursive;
+
+    padding:25px;
+
+}
+
+
+
+.container{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+
+.card{
+
+    background:rgba(255,255,255,.09);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+}
+
+
+
+h1{
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.intro{
+
+    font-size:1.4rem;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.video-section{
+
+    margin:50px 0;
+
+}
+
+
+
+.video-title{
+
+    font-size:2rem;
+
+    color:#ffd5fa;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.video-text{
+
+    font-size:1.3rem;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+}
+
+
+
+iframe{
+
+    width:100%;
+
+    height:420px;
+
+    border-radius:20px;
+
+    border:none;
+
+}
+
+
+
+.separator{
+
+    height:1px;
+
+    background:rgba(255,255,255,.25);
+
+    margin:45px 0;
+
+}
+
+
+
+.back{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff7eb3,#6a5acd);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+
+}
+
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="stars"></div>
 
-<div class="music-card">
-    <h1>✨ Arrullo de Estrellas ✨</h1>
+<div class="container">
 
-    <audio id="cancion">
-        <source src="arrullodeestrellas.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
 
-    <button class="music-button" onclick="reproducir()">
-        🎵 Reproducir canción
-    </button>
+<div class="card">
+
+
+<h1>
+Un pedacito de nuestra historia
+</h1>
+
+
+
+<p class="intro">
+
+Hay recuerdos que una foto no puede guardar...
+
+
+</p>
+
+
+
+
+
+<!-- VIDEO DE ELLOS DOS -->
+
+<div class="video-section">
+
+
+<h2 class="video-title">
+
+❤️ Tú y yo
+
+</h2>
+
+
+
+
+
+<iframe
+
+src="https://www.youtube.com/embed/3C9YzFdpWJY"
+
+allowfullscreen>
+
+</iframe>
+
+
 </div>
 
 
-<script>
-    const audio = document.getElementById("cancion");
 
-    function reproducir() {
-        if (audio.paused) {
-            audio.play();
-            document.querySelector(".music-button").innerHTML = "⏸️ Pausar canción";
-        } else {
-            audio.pause();
-            document.querySelector(".music-button").innerHTML = "🎵 Reproducir canción";
-        }
-    }
-</script>
+
+
+<div class="separator"></div>
+
+
+
+
+
+<!-- VIDEO DE FAMILIA Y AMIGOS -->
+
+<div class="video-section">
+
+
+<h2 class="video-title">
+
+Familia y amigos
+
+</h2>
+
+
+<p class="video-text">
+
+Porque una parte de lo que eres viene de todas las personas que te quieren,
+te acompañan y han formado parte de tu camino.
+
+</p>
+
+
+<iframe
+
+src="PON_AQUI_EL_VIDEO_DE_FAMILIA"
+
+allowfullscreen>
+
+</iframe>
+
+
+</div>
+
+
+
+
+
+<p class="intro">
+
+Gracias por dejarme conocer tu mundo y formar parte de tu historia. ❤️
+
+</p>
+
+
+
+<a href="index.html" class="back">
+
+💌 Volver a la carta
+
+</a>
+
+
+
+</div>
+
+</div>
+
+
 
 </body>
+
 </html>

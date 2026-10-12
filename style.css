@@ -572,28 +572,3 @@ h1{
 
 
 }
-
-.video-button {
-    text-decoration: none; /* Quita el subrayado */
-    color: white; /* Cambia el color del texto */
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #ff7eb3, #ff758c);
-    font-size: 20px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.video-button:hover {
-    color: white; /* Evita que cambie a azul al pasar el mouse */
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 118, 140, 0.7);
-}
-
-/* Evita que se vea azul después de haberlo visitado */
-.video-button:visited {
-    color: white;
-
-}
-
