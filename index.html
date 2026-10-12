@@ -28,10 +28,8 @@
 
 
 <body>
-
-
-
-<div id="stars"></div>
+   
+  
 
 
 
@@ -66,20 +64,157 @@
 
 
         <h1>
-            Para Carlos
+            Para Carlos:
         </h1>
 
 
 
-        <p class="intro">
-
-            (Aqui puede sponer un texto para iniciar la carta)
-
-        </p>
+       
 
 
 
     </header>
+    <!-- =========================
+     REPRODUCTOR DE CANCION
+========================= -->
+
+<style>
+
+.music-container{
+
+    text-align:center;
+
+    margin:25px 0 40px;
+
+}
+
+
+.music-button{
+
+    background:linear-gradient(45deg,#ff7eb3,#6a5acd);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:1.4rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+
+    0 0 20px rgba(255,126,179,.4);
+
+}
+
+
+.music-button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+    0 0 30px rgba(255,126,179,.8);
+
+}
+
+
+.music-button:active{
+
+    transform:scale(.95);
+
+}
+
+
+</style>
+
+
+
+<div class="music-container">
+
+
+    <audio id="cancion">
+
+
+        <source src="arrullodeestrellas.mp3" type="audio/mpeg">
+
+
+        Tu navegador no soporta audio.
+
+
+    </audio>
+
+
+
+    <button class="music-button" onclick="reproducir()">
+
+
+        🎵 Reproducir
+
+
+    </button>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+const audio = document.getElementById("cancion");
+
+
+const botonMusica = document.querySelector(".music-button");
+
+
+
+function reproducir(){
+
+
+    if(audio.paused){
+
+
+        audio.volume = 0.35;
+
+
+        audio.play();
+
+
+
+        botonMusica.innerHTML = "⏸️ Pausar canción";
+
+
+
+    }else{
+
+
+        audio.pause();
+
+
+
+        botonMusica.innerHTML = "🎵 Reproducir nuestra canción";
+
+
+    }
+
+
+}
+
+
+</script>
 
 
 
@@ -93,12 +228,6 @@
 
 
 
-
-        <p class="name">
-
-            Carlos:
-
-        </p>
 
 
 
@@ -304,6 +433,20 @@
 
 
         </div>
+        <div class="postscript">
+
+    <h3>P.D.</h3>
+
+    <p>
+        Preparé una sorpresa más, porque hay recuerdos que las palabras no alcanzan a
+        expresar.
+    </p>
+
+    <a href="videos.html" class="video-button">
+        Haz clic aquí para descubrirla
+    </a>
+
+</div>
 
 
 
