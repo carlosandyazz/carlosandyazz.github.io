@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <title>Nuestros recuerdos ❤️</title>
 
-
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
-
 
 <style>
 
@@ -22,139 +17,159 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
 
     min-height:100vh;
+    overflow-x:hidden;
 
     background:
-    radial-gradient(circle at top,#24356b,#090d1d 50%,#02030a);
+    radial-gradient(circle at top,#24356b,#090d1d 45%,#02030a);
 
     color:white;
-
     font-family:'Dancing Script',cursive;
 
     padding:25px;
 
 }
 
+/*=========================
+        ESTRELLAS
+=========================*/
 
+#stars{
+
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+}
+
+/*=========================
+      CONTENEDOR
+=========================*/
 
 .container{
 
-    max-width:800px;
-
+    max-width:900px;
     margin:auto;
 
 }
 
-
-
 .card{
 
-    background:rgba(255,255,255,.09);
+    background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
     border-radius:25px;
 
-    padding:30px 20px;
+    padding:35px;
 
-    text-align:center;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.5);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
 
 }
 
-
+/*=========================
+        TITULOS
+=========================*/
 
 h1{
 
-    font-size:2.5rem;
+    text-align:center;
 
-    margin-bottom:25px;
+    font-size:3rem;
+
+    margin-bottom:20px;
 
 }
-
-
 
 .intro{
 
-    font-size:1.4rem;
+    text-align:center;
+
+    font-size:1.45rem;
 
     line-height:1.7;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
+
+    color:#f2f2f2;
 
 }
 
-
+/*=========================
+        VIDEOS
+=========================*/
 
 .video-section{
 
-    margin:50px 0;
+    margin:55px 0;
 
 }
-
-
 
 .video-title{
 
-    font-size:2rem;
+    text-align:center;
+
+    font-size:2.2rem;
 
     color:#ffd5fa;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
-
-
 .video-text{
 
-    font-size:1.3rem;
+    text-align:center;
 
-    line-height:1.6;
+    font-size:1.35rem;
+
+    line-height:1.7;
 
     margin-bottom:25px;
 
 }
 
-
-
-iframe{
+video{
 
     width:100%;
 
-    height:420px;
-
     border-radius:20px;
 
-    border:none;
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+    background:black;
 
 }
-
-
 
 .separator{
 
+    width:70%;
+
     height:1px;
 
-    background:rgba(255,255,255,.25);
+    margin:60px auto;
 
-    margin:45px 0;
+    background:rgba(255,255,255,.2);
 
 }
 
-
+/*=========================
+        BOTON
+=========================*/
 
 .back{
 
     display:inline-block;
 
-    margin-top:35px;
+    margin-top:40px;
 
-    padding:12px 30px;
+    padding:14px 35px;
 
     border-radius:50px;
 
@@ -164,122 +179,147 @@ iframe{
 
     text-decoration:none;
 
-    font-size:1.3rem;
+    font-size:1.4rem;
 
-    font-weight:bold;
+    transition:.3s;
 
 }
 
+.back:hover{
+
+    transform:scale(1.05);
+
+}
+
+.final{
+
+    text-align:center;
+
+    margin-top:45px;
+
+    font-size:1.5rem;
+
+    color:#ffd5fa;
+
+}
+
+/*=========================
+        RESPONSIVE
+=========================*/
+
+@media(max-width:700px){
+
+.card{
+
+    padding:25px 18px;
+
+}
+
+h1{
+
+    font-size:2.3rem;
+
+}
+
+.video-title{
+
+    font-size:1.8rem;
+
+}
+
+.intro,
+.video-text{
+
+    font-size:1.2rem;
+
+}
+
+}
 
 </style>
 
 </head>
 
-
 <body>
 
+<div id="stars"></div>
 
 <div class="container">
 
-
 <div class="card">
 
-
-<h1>
-Un pedacito de nuestra historia
-</h1>
-
-
+<h1>Un pedacito de nuestra historia ❤️</h1>
 
 <p class="intro">
 
-Hay recuerdos que una foto no puede guardar...
 
 
 </p>
 
-
-
-
-
-<!-- VIDEO DE ELLOS DOS -->
+<!-- VIDEO 1 -->
 
 <div class="video-section">
 
-
 <h2 class="video-title">
 
-❤️ Tú y yo
+Tú y yo 
 
 </h2>
-
-
-
-
-
-<iframe
-
-src="https://www.youtube.com/embed/3C9YzFdpWJY"
-
-allowfullscreen>
-
-</iframe>
-
-
-</div>
-
-
-
-
-
-<div class="separator"></div>
-
-
-
-
-
-<!-- VIDEO DE FAMILIA Y AMIGOS -->
-
-<div class="video-section">
-
-
-<h2 class="video-title">
-
-Familia y amigos
-
-</h2>
-
 
 <p class="video-text">
 
-Porque una parte de lo que eres viene de todas las personas que te quieren,
-te acompañan y han formado parte de tu camino.
+Cada segundo a tu lado se convirtió en un recuerdo que vale la pena conservar.
+Gracias por cada sonrisa, cada abrazo y cada momento que compartimos.
 
 </p>
 
+<video controls>
 
-<iframe
+    <source src="video1.mp4" type="video/mp4">
 
-src="PON_AQUI_EL_VIDEO_DE_FAMILIA"
+    Tu navegador no soporta video.
 
-allowfullscreen>
-
-</iframe>
-
+</video>
 
 </div>
 
+<div class="separator"></div>
 
+<!-- VIDEO 2 -->
 
+<div class="video-section">
 
+<h2 class="video-title">
 
-<p class="intro">
+🤍 Familia y amigos 🤍
 
-Gracias por dejarme conocer tu mundo y formar parte de tu historia. ❤️
+</h2>
+
+<p class="video-text">
+
+Las personas que te rodean también forman parte de la maravillosa persona que eres.
+Ellos han estado contigo en diferentes momentos de tu vida y quería que este pequeño regalo también les hiciera un espacio.
 
 </p>
 
+<video controls>
 
+    <source src="video2.mp4" type="video/mp4">
+
+    Tu navegador no soporta video.
+
+</video>
+
+</div>
+
+<p class="final">
+
+Gracias por permitirme formar parte de tu historia.
+Espero que cada vez que vuelvas aquí recuerdes cuánto significas para mí. ❤️
+
+</p>
+
+<div style="text-align:center;">
 
 <a href="index.html" class="back">
 
@@ -287,14 +327,56 @@ Gracias por dejarme conocer tu mundo y formar parte de tu historia. ❤️
 
 </a>
 
-
-
 </div>
 
 </div>
 
+</div>
 
+<script>
+
+/* ESTRELLAS */
+
+const stars = document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+    const star=document.createElement("span");
+
+    const size=Math.random()*3+1;
+
+    star.style.position="absolute";
+    star.style.width=size+"px";
+    star.style.height=size+"px";
+    star.style.borderRadius="50%";
+    star.style.background="white";
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.opacity=Math.random();
+
+    star.style.animation=`blink ${2+Math.random()*4}s infinite`;
+
+    stars.appendChild(star);
+
+}
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+@keyframes blink{
+
+0%{opacity:.2;transform:scale(1);}
+50%{opacity:1;transform:scale(1.6);}
+100%{opacity:.2;transform:scale(1);}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+</script>
 
 </body>
-
 </html>
